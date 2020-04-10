@@ -11,7 +11,10 @@ This function allows you to obtain violinboxplots and enhanced radar plot to rep
 ### Dependencies: ggplot2
 
 Load Package: 
+
+```{r}
 if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
+```
 
 ## Example
 
