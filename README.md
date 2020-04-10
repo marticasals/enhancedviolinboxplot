@@ -17,13 +17,18 @@ if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
 
 The example data set is soccer data of the top 13 European clubs in the 2016/17 season of most importat leagues (Premier League, La Liga, , Ligue 1, Bundesliga, and Serie A. The variables used in this example are “competition” and “18-yard shot” that it was obtained from the publicly accessible website www.whoscored.com owned by Opta Sports.  
 
+```{r}
 load("Soccer.RData")
-source(".R")
+source("function_enhacedviolinboxplot.R")
+```
 
+```{r}
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F)+ xlab('Competition')+ ylab('18-yard-shot')
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T)+ xlab('Competition')+ ylab('18-yard-shot')
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F, dicotom=7)+ xlab('Competition')+ ylab('18-yard-shot')
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=7)+ xlab('Competition')+ ylab('18-yard-shot')
+```
+
 
 
 ```
