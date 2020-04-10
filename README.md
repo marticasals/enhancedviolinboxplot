@@ -6,5 +6,12 @@
 
 This function allows you to obtain violinboxplots and enhanced radar plot to represent the data pattern in parallel coordinates and also in polar coordinates, taking into account the statistical summaries as well as their distribution, without neglecting the interesting atypical data in the form of radar plots.
 
+## Initialitzation
+
+### Dependencies: ggplot2
+
+Load Package: 
+if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
+
 
 ```
