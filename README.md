@@ -25,8 +25,8 @@ source("function_enhacedviolinboxplot.R")
 ```{r}
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F)+ xlab('Competition')+ ylab('18-yard-shot')
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T)+ xlab('Competition')+ ylab('18-yard-shot')
-enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F, dicotom=7)+ xlab('Competition')+ ylab('18-yard-shot')
-enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=7)+ xlab('Competition')+ ylab('18-yard-shot')
+enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F, dicotom=7)+ xlab('Competition')
+enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=7)+ xlab('Competition')
 ```
 
 
