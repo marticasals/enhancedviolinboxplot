@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# enhacedviolinboxplot
+# enhancedviolinboxplot
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
@@ -23,14 +23,14 @@ We use the example of soccer that is described in our article. The same function
 
 ```{r}
 load("soccer_wide_format.RData")
-source("function_wide_format_enhacedviolinboxplot.r")
+source("function_wide_format_enhancedviolinboxplot.r")
 ```
 
 ```{r}
-enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F)+ xlab('Competition')+ ylab('18-yard-shot')
-enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T)+ xlab('Competition')+ ylab('18-yard-shot')
-enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F, dicotom=6)+ xlab('Competition')
-enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=6)+ xlab('Competition')
+enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=F)+ xlab('Competition')+ ylab('18-yard-shot')
+enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=T)+ xlab('Competition')+ ylab('18-yard-shot')
+enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=F, dicotom=6)+ xlab('Competition')
+enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=6)+ xlab('Competition')
 ```
 
 
