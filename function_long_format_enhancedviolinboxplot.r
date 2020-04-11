@@ -1,5 +1,5 @@
 
-enhacedviolinboxplotattached<-function(data,variables,dicotom=NULL, polar=T){
+enhancedviolinboxplotattached<-function(data,variables,dicotom=NULL, polar=T){
 
 # PARAMETERS
 
