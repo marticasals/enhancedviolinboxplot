@@ -16,13 +16,14 @@ Load Package:
 if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
 ```
 
-## Example
+## Example of soccer with wide datasets
 
-The example data set is soccer data of the top 13 European clubs in the 2016/17 season of most importat leagues (Premier League, La Liga, , Ligue 1, Bundesliga, and Serie A. The variables used in this example are “competition” and “18-yard shot” that it was obtained from the publicly accessible website www.whoscored.com owned by Opta Sports.  
+The example data set is soccer data of the top 13 European clubs in the 2016/17 season of most importat leagues (Premier League, La Liga, Ligue 1, Bundesliga, and Serie A. The variables used in this example are “competition” and “18-yard shot” that it was obtained from the publicly accessible website www.whoscored.com owned by Opta Sports.  
+We use the example of soccer that is described in our article. The same function can be used for the basketball example. The example of soccer can be also applied with long format with the function that is available.
 
 ```{r}
-load("soccer.RData")
-source("function_enhacedviolinboxplot.R")
+load("soccer_wide_format.RData")
+source("function_wide_format_enhacedviolinboxplot.r")
 ```
 
 ```{r}
