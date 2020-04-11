@@ -1,3 +1,4 @@
+
 enhacedviolinboxplot<-function(data,variables,dicotom=NULL, polar=T){
 
 # PARAMETERS
@@ -12,7 +13,7 @@ ncol=length(variables)
 nfil=dim(data)[1]
 
 
-# We can start using the data frame “data2” that will contain the stacked variables and a factor that tells us what each one is.
+# We can start using the data frame �data2� that will contain the stacked variables and a factor that tells us what each one is.
 dades2=NULL
 for (i in 1:ncol){dades2=c(dades2,data[,variables[i]])}
 dades2=as.data.frame(dades2)
@@ -28,10 +29,10 @@ resum=tapply(dades2[,1],dades2[,2], summary)
 
 # We save upper and lower limits of each group.
 limit.sup=NULL
-for (i in 1:ncol){limit.sup[i]=(resum[[i]][5]+1.5*(resum[[i]][5]-resum[[i]][3]))}
+for (i in 1:ncol){limit.sup[i]=(resum[[i]][5]+1.5*(resum[[i]][5]-resum[[i]][2]))}
 
 limit.inf=NULL
-for (i in 1:ncol){limit.inf[i]=(resum[[i]][3]-1.5*(resum[[i]][5]-resum[[i]][3]))}
+for (i in 1:ncol){limit.inf[i]=(resum[[i]][2]-1.5*(resum[[i]][5]-resum[[i]][2]))}
 
 # We obtain variables with the upper and lower limits for each individual.
 dades2$upper.limit=rep(limit.sup, each=nfil)
