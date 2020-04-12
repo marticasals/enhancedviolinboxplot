@@ -45,7 +45,7 @@ enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F, dicotom=6)+ labs(fill="Match
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=6)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
 ```
 ![](Figures_example/example_Fig4.png)<!-- -->
-```
+
 
 
 
