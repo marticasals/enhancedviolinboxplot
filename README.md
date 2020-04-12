@@ -2,7 +2,7 @@
 
 # enhancedviolinboxplot
 
-The primary developers are:  Pepus Daunis-i-Estadella and Martí Casals
+The primary developers are Pepus Daunis-i-Estadella and Martí Casals.
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
