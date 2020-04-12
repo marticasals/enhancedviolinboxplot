@@ -27,22 +27,22 @@ source("function_wide_format_enhancedviolinboxplot.r")
 ```
 
 ```{r}
-enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F)
+enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=F)
 ```
 ![](Figures_example/example_Fig1.png)<!-- -->
 
 ```{r}
-enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T)+ xlab('Competition')+ ylab('18-yard-shot')
+enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=T)+ xlab('Competition')+ ylab('18-yard-shot')
 ```
 ![](Figures_example/example_Fig2.png)<!-- -->
 
 ```{r}
-enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F, dicotom=6)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
+enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=F, dicotom=6)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
 ```
 ![](Figures_example/example_Fig3.png)<!-- -->
 
 ```{r}
-enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=6)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
+enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=6)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
 ```
 ![](Figures_example/example_Fig4.png)<!-- -->
 
