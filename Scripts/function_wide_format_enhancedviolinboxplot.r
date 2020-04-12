@@ -12,7 +12,7 @@ ncol=length(variables)
 nfil=dim(data)[1]
 
 
-# We can start using the data frame �data2� that will contain the stacked variables and a factor that tells us what each one is.
+# We can start using the data frame "data2" that will contain the stacked variables and a factor that tells us what each one is.
 dades2=NULL
 for (i in 1:ncol){dades2=c(dades2,data[,variables[i]])}
 dades2=as.data.frame(dades2)
@@ -37,9 +37,11 @@ for (i in 1:ncol){limit.inf[i]=(resum[[i]][2]-1.5*(resum[[i]][5]-resum[[i]][2]))
 dades2$upper.limit=rep(limit.sup, each=nfil)
 dades2$lower.limit=rep(limit.inf, each=nfil)
 
-# We begin the plot representation
+# We begin the plot representation.
 # We define the p element for the data between the upper and lower limits our data except the atypical ones. Then, for this set we represent the violin_plot of the data except the atypical ones. 
+
 p <- ggplot(dades2[dades2$value < dades2$upper.limit & dades2$value > dades2$lower.limit,], aes(x=factor(group), y=value, col=factor(group)))
+
 #Then, we will add the representation of the data above the upper.limit or below the lower.limit (atypical).
 # We include two loops.  The first is to know if we have to dichotomize or not. If we need to dichotomize, we will add the geom_split_violin function and a new variable and another one if they are polar or not. If we need to use polar coordinates, we should add + coordinate ().
 
@@ -54,7 +56,7 @@ p+geom_violin()+ geom_point(data=dades2[dades2$value > dades2$upper.limit | dade
 
 }else{
 
-#It is necessary to install the GeomSplitViolin and the geom_split_violin function
+#It is necessary to install the GeomSplitViolin and the geom_split_violin function.
 GeomSplitViolin <- ggproto("GeomSplitViolin", GeomViolin, 
                            draw_group = function(self, data, ..., draw_quantiles = NULL) {
   data <- transform(data, xminv = x - violinwidth * (x - xmin), xmaxv = x + violinwidth * (xmax - x))
@@ -83,9 +85,11 @@ geom_split_violin <- function(mapping = NULL, data = NULL, stat = "ydensity", po
         position = position, show.legend = show.legend, inherit.aes = inherit.aes, 
         params = list(trim = trim, scale = scale, draw_quantiles = draw_quantiles, na.rm = na.rm, ...))
 }
-#Here, we finish the declaration of the function geom_split_violin.
 
-# We create a new variable with the colour from the original dataset column
+# Here, we finish the declaration of the function geom_split_violin.
+
+# We create a new variable with the colour from the original dataset column.
+                           
 dades2$color=rep(data[,dicotom], ncol)
 
 
