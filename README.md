@@ -29,7 +29,7 @@ source("function_wide_format_enhancedviolinboxplot.r")
 ```{r}
 
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F)
-![](example_Fig1.png)
+![](Figures_example/example_Fig1.png)<!-- -->
 
 
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T)+ xlab('Competition')+ ylab('18-yard-shot')
