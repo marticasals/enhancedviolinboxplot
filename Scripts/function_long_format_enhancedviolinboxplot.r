@@ -1,9 +1,5 @@
 enhacedviolinboxplotattached<-function(data,variables,dicotom=NULL, polar=T){
 
-# DESCRIPCTION OF THE FUNCTION
-
-# This function allows you to obtain violinboxplots and enhanced radar plot to represent the data pattern in parallel coordinates and also in polar coordinates, taking into account the statistical summaries as well as their distribution, without neglecting the interesting atypical data in the form of radar plots.
-
 # PARAMETERS
 
 # data {array}: It is a dataset in which there are columns of the data.
@@ -11,27 +7,12 @@ enhacedviolinboxplotattached<-function(data,variables,dicotom=NULL, polar=T){
 # dicotom: It is the number of the column regarding the categorical variable (dummy or binary) that will allow us to separate them into two categories. By default, dicotom = NULL.
 # polar: It is a parameter for whether we can decide to use a polar graph or not. Default polar = TRUE
 
-# EXAMPLE: We use an example of soccer that is described in our article. The same function can be used for the basketball example. 
-
-#examples of use:
-#enhacedviolinboxplotattached(soccer2,c(1,2),polar=F, dicotom=3)
-#enhacedviolinboxplotattached(soccer2,c(1,2), polar=T)+ xlab('Competition')+ ylab('18-yard-shot')
-#enhacedviolinboxplotattached(soccer2,c(1,2), polar=T, dicotom=3)+ xlab('Competition')+ ylab('18-yard-shot')
-#enhacedviolinboxplotattached(soccer2,c(1,2), polar=F, dicotom=3)+ labs(fill="Stade")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
-
-
-# INITIALITZATION
-
-
-# Dependencies: ggplot2
-#Load Package: 
-if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
 
 # We want to know the dimension and variables of the data.
 nfil=dim(data)[1]
 
 
-# We can start using the data frame �data2� that will contain the stacked variables and a factor that tells us what each one is.
+# We can start using the data frame "data2" that will contain the stacked variables and a factor that tells us what each one is.
 dades2=NULL
 dades2=data[,variables[1]]
 dades2=as.data.frame(dades2)
@@ -60,8 +41,8 @@ for (i in 1:ncol){limit.inf[i]=(resum[[i]][2]-1.5*(resum[[i]][5]-resum[[i]][2]))
 # We add this in two columns in an ordered way
 
 dades2$aux=seq(1:nfil)
-# we sort according 
 dades2=dades2[order(dades2[,2]),]
+  
 # We obtain variables with the upper and lower limits for each individual.
 
 dades2$upper.limit=rep(limit.sup, factor.dim)
@@ -69,11 +50,11 @@ dades2$lower.limit=rep(limit.inf, factor.dim)
 
 dades2=dades2[order(dades2$aux),]
 
-
-
-# We begin the plot representation
+# We begin the plot representation.
 # We define the p element for the data between the upper and lower limits our data except the atypical ones. Then, for this set we represent the violin_plot of the data except the atypical ones. 
+  
 p <- ggplot(dades2[dades2$value < dades2$upper.limit & dades2$value > dades2$lower.limit,], aes(x=factor(group), y=value, col=factor(group)))
+
 #Then, we will add the representation of the data above the upper.limit or below the lower.limit (atypical).
 # We include two loops.  The first is to know if we have to dichotomize or not. If we need to dichotomize, we will add the geom_split_violin function and a new variable and another one if they are polar or not. If we need to use polar coordinates, we should add + coordinate ().
 
@@ -88,7 +69,8 @@ p+geom_violin()+ geom_point(data=dades2[dades2$value > dades2$upper.limit | dade
 
 }else{
 
-#It is necessary to install the GeomSplitViolin and the geom_split_violin function
+#It is necessary to install the GeomSplitViolin and the geom_split_violin function.
+  
 GeomSplitViolin <- ggproto("GeomSplitViolin", GeomViolin, 
                            draw_group = function(self, data, ..., draw_quantiles = NULL) {
   data <- transform(data, xminv = x - violinwidth * (x - xmin), xmaxv = x + violinwidth * (xmax - x))
@@ -117,7 +99,8 @@ geom_split_violin <- function(mapping = NULL, data = NULL, stat = "ydensity", po
         position = position, show.legend = show.legend, inherit.aes = inherit.aes, 
         params = list(trim = trim, scale = scale, draw_quantiles = draw_quantiles, na.rm = na.rm, ...))
 }
-#Here, we finish the declaration of the function geom_split_violin.
+
+# Here, we finish the declaration of the function geom_split_violin.
 
 # We create a new variable with the colour from the original dataset column
 dades2$color=data[,dicotom]
