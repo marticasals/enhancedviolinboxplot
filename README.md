@@ -31,17 +31,20 @@ enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F)
 ```
 ![](Figures_example/example_Fig1.png)<!-- -->
 
-
+```{r}
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T)+ xlab('Competition')+ ylab('18-yard-shot')
-![](example_Fig2.png)
+```
+![](Figures_example/example_Fig2.png)<!-- -->
 
-
+```{r}
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F, dicotom=6)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
-![](example_Fig3.png)
+```
+![](Figures_example/example_Fig3.png)<!-- -->
 
-
+```{r}
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=6)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
-![](example_Fig4.png)
+```
+![](Figures_example/example_Fig4.png)<!-- -->
 ```
 
 
