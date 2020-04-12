@@ -27,8 +27,8 @@ source("function_wide_format_enhancedviolinboxplot.r")
 ```
 
 ```{r}
-
 enhacedviolinboxplot(soccer, c(1,2,3,4,5), polar=F)
+```
 ![](Figures_example/example_Fig1.png)<!-- -->
 
 
