@@ -62,7 +62,7 @@ colnames(soccer2)[1]="18-yard-shoot"
 ```
 
 ```{r}
-enhancedviolinboxplotlong(soccer2, c(1,2,3,4,5), polar=T, dicotom=6)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
+enhancedviolinboxplotlong(soccer2, c(1,2), polar=T, dicotom=3)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
 ```
 ![](Figures_example/example_Fig4.png)<!-- -->
 
