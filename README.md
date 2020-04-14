@@ -52,7 +52,7 @@ enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=6)+ labs(fill="Matc
 
 ## Example of soccer with long datasets
 
-Imagine we have soccer datasets with long format. We can aplly for instance the last figure as following:
+Imagine we have soccer datasets with long format. We can apply for instance the last figure as following:
 
 
 ```{r}
