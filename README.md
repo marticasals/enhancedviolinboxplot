@@ -24,8 +24,8 @@ The example data set is soccer data of the top 13 European clubs in the 2016/17 
 We use the example of soccer that is described in our article. The same function can be used for the basketball example. The example of soccer can be also applied with long format with the function that is available.
 
 ```{r}
-load("soccer_wide_format.RData")
-source("function_wide_format_enhancedviolinboxplot.r")
+load ("Data/soccer_wide_format.RData")
+source("Scripts/function_wide_format_enhancedviolinboxplot.r")
 ```
 
 ```{r}
@@ -43,12 +43,28 @@ enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=F, dicotom=6)+ labs(fill="Matc
 ```
 ![](Figures_example/example_Fig3.png)<!-- -->
 
+
 ```{r}
 enhancedviolinboxplot(soccer, c(1,2,3,4,5), polar=T, dicotom=6)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
 ```
 ![](Figures_example/example_Fig4.png)<!-- -->
 
 
+## Example of soccer with long datasets
+
+Imagine we have soccer datasets with long format. We can aplly for instance the last figure as following:
+
+
+```{r}
+load ("Data/soccer_long_format.RData")
+source("Scripts/function_long_format_enhancedviolinboxplot.r")
+colnames(soccer2)[1]="18-yard-shoot"
+```
+
+```{r}
+enhancedviolinboxplot(soccer2, c(1,2,3,4,5), polar=T, dicotom=6)+ labs(fill="Match Location")+ labs(color="Competition")+ xlab('Competition')+ ylab('18-yard-shot')
+```
+![](Figures_example/example_Fig4.png)<!-- -->
 
 
 
