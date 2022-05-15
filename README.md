@@ -1,5 +1,9 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# Article published in International Journal of Sports Science & Coaching
+
+Originally, this is the repository for the article: _"Violinboxplot and enhanced radar plot as components of effective graphical dashboards: An educational example of sports analytics"_ that is published in the journal [International Journal of Sports Science & Coaching]. You can check [here](https://journals.sagepub.com/doi/full/10.1177/17479541221099638). 
+
 # enhancedviolinboxplot
 
 The primary developers are Pepus Daunis-i-Estadella and Martí Casals.
